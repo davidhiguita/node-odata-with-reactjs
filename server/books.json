@@ -1,0 +1,121 @@
+[{
+    "author": "Gambardella, Matthew",
+    "description": "An in-depth look at creating applications \n with XML.",
+    "genre": "Computer",
+    "price": 44.95,
+    "publish_date": "2000-10-01T00:00:00.000Z",
+    "title": "XML Developer's Guide",
+    "id": "ec3a3840-be5e-4d0e-bc98-6ae24871cf0a"
+  }, {
+    "author": "Ralls, Kim",
+    "description": "A former architect battles corporate zombies, \n an evil sorceress, and her own childhood to become queen \n of the world.",
+    "genre": "Fantasy",
+    "price": 5.95,
+    "publish_date": "2000-12-16T00:00:00.000Z",
+    "title": "Midnight Rain",
+    "id": "3a312098-5b20-48b0-b485-39a2466cb01e"
+  }, {
+    "author": "Corets, Eva",
+    "description": "After the collapse of a nanotechnology \n society in England, the young survivors lay the \n foundation for a new society.",
+    "genre": "Fantasy",
+    "price": 5.95,
+    "publish_date": "2000-11-17T00:00:00.000Z",
+    "title": "Maeve Ascendant",
+    "id": "6e70e6b9-5106-4ba5-bc33-9bd29c71659b"
+  }, {
+    "author": "Corets, Eva",
+    "description": "In post-apocalypse England, the mysterious \n agent known only as Oberon helps to create a new life \n for the inhabitants of London. Sequel to Maeve \n Ascendant.",
+    "genre": "Fantasy",
+    "price": 5.95,
+    "publish_date": "2001-03-10T00:00:00.000Z",
+    "title": "Oberon's Legacy",
+    "id": "8513372f-db28-48e3-b77e-3a754ea75f84"
+  }, {
+    "author": "Corets, Eva",
+    "description": "The two daughters of Maeve, half-sisters, \n battle one another for control of England. Sequel to \n Oberon's Legacy.",
+    "genre": "Fantasy",
+    "price": 5.95,
+    "publish_date": "2001-09-10T00:00:00.000Z",
+    "title": "The Sundered Grail",
+    "id": "a3e8cc90-284a-4727-a08c-aee22958380c"
+  }, {
+    "author": "Randall, Cynthia",
+    "description": "When Carla meets Paul at an ornithology \n conference, tempers fly as feathers get ruffled.",
+    "genre": "Romance",
+    "price": 4.95,
+    "publish_date": "2000-09-02T00:00:00.000Z",
+    "title": "Lover Birds",
+    "id": "d9d3ab98-7068-4b07-99d9-fef4775c60c0"
+  }, {
+    "author": "Thurman, Paula",
+    "description": "A deep sea diver finds true love twenty \n thousand leagues beneath the sea.",
+    "genre": "Romance",
+    "price": 4.95,
+    "publish_date": "2000-11-02T00:00:00.000Z",
+    "title": "Splish Splash",
+    "id": "6eac5183-6086-49e2-8749-baee2ddabc01"
+  }, {
+    "author": "Knorr, Stefan",
+    "description": "An anthology of horror stories about roaches,\n centipedes, scorpions and other insects.",
+    "genre": "Horror",
+    "price": 4.95,
+    "publish_date": "2000-12-06T00:00:00.000Z",
+    "title": "Creepy Crawlies",
+    "id": "37ebc82b-ee53-4559-ba2a-5791198e341c"
+  }, {
+    "author": "Kress, Peter",
+    "description": "After an inadvertant trip through a Heisenberg\n Uncertainty Device, James Salway discovers the problems \n of being quantum.",
+    "genre": "Science Fiction",
+    "price": 6.95,
+    "publish_date": "2000-11-02T00:00:00.000Z",
+    "title": "Paradox Lost",
+    "id": "52d89588-2dde-4c92-a06b-63eb98b36451"
+  }, {
+    "author": "O'Brien, Tim",
+    "description": "Microsoft's .NET initiative is explored in \n detail in this deep programmer's reference.",
+    "genre": "Computer",
+    "price": 36.95,
+    "publish_date": "2000-12-09T00:00:00.000Z",
+    "title": "Microsoft .NET: The Programming Bible",
+    "id": "514f68f2-8746-4f58-bb03-e7a4164701ba"
+  }, {
+    "author": "O'Brien, Tim",
+    "description": "The Microsoft MSXML3 parser is covered in \n detail, with attention to XML DOM interfaces, XSLT processing, \n SAX and more.",
+    "genre": "Computer",
+    "price": 36.95,
+    "publish_date": "2000-12-01T00:00:00.000Z",
+    "title": "MSXML3: A Comprehensive Guide",
+    "id": "fbbb080f-cd86-4883-9fb2-822e3a36654e"
+  }, {
+    "author": "Galos, Mike",
+    "description": "Microsoft Visual Studio 7 is explored in depth,\n looking at how Visual Basic, Visual C++, C#, and ASP+ are \n integrated into a comprehensive development \n environment.",
+    "genre": "Computer",
+    "price": 49.95,
+    "publish_date": "2001-04-16T00:00:00.000Z",
+    "title": "Visual Studio 7: A Comprehensive Guide",
+    "id": "7d0386fc-eb53-4768-9f92-1b8e185b04a2"
+  }, {
+    "author": "Miranda, Vinicius",
+    "description": "An in-depth look at creating applications \n with XML.",
+    "genre": "Computer",
+    "price": 44.95,
+    "publish_date": "2018-10-10T00:00:00.000Z",
+    "title": "Testanto API's",
+    "id": "1e27dd09-21cb-43ef-9895-e6a0aa1736e8"
+  }, {
+    "author": "Silva, Bruno ",
+    "description": "An in-depth look at creating applications \n with XML.",
+    "genre": "Computer",
+    "price": 99.99,
+    "publish_date": "2018-10-10T00:00:00.000Z",
+    "title": "BSC",
+    "id": "522d3ebe-5dfb-4a6f-bbca-c4d1ffd9ebb3"
+  }, {
+    "author": "Andrade, Leonardo ",
+    "description": "An in-depth look at creating applications \n with XML.",
+    "genre": "Computer",
+    "price": 99.99,
+    "publish_date": "2018-10-10T00:00:00.000Z",
+    "title": "Ionic",
+    "id": "00d7e3e3-8040-4c49-ba08-cbab9bd89edd"
+}]

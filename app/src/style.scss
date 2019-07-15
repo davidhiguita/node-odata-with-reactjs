@@ -1,0 +1,42 @@
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.app {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "app-query app-query"
+  "app-filters app-results"
+  "app-fields app-results";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 1fr ;
+  height: 100vh;
+  padding: 60px 100px;
+
+  &__query {
+    border: solid 2px green;
+    grid-area: app-query;
+  }
+
+  &__results {
+    border: solid 2px blue;
+    grid-area: app-results;
+  }
+
+  &__filters {
+    border: solid 2px red;
+  }
+
+  &__fields {
+    border: solid 2px red;
+  }
+
+  .react-json-view {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
