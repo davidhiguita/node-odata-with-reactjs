@@ -1,5 +1,5 @@
 // @vendors
-import React, { useState } from 'react';
+import React from 'react';
 
 // @odata helper
 import { getInfoByFields } from '../../odata-middleware';
@@ -7,27 +7,16 @@ import { getInfoByFields } from '../../odata-middleware';
 // @styles
 import './style.scss';
 
-const initialFieldsState = {
-  title: false
-};
-
-const fieldsList = [
-  'author',
-  'description',
-  'genre',
-  'price',
-  'publish_date',
-  'title',
-  'id'
-];
-
 const URL = 'http://localhost:1945/books';
 
 const Fields = ({
+  booksFields,
+  fields,
+  setFields,
   setQuery,
   setResults
 }) => {
-  const [fields, setFields] = useState({ ...initialFieldsState });
+
 
   const setField = (fieldName) => (e) => {
     const newFields = { ...fields };
@@ -53,10 +42,12 @@ const Fields = ({
   return (
     <div className="app__fields">
       {
-        fieldsList.map((currentField, index) => (
-          <div className={`field-${currentField}`}>
+        booksFields.map((currentField, index) => (
+          <div
+            className={`field-${currentField}`}
+            key={`field-${index}`}
+          >
             <input
-              key={`field-${index}`}
               onChange={setField(currentField)}
               placeholder={currentField}
               type="checkbox"

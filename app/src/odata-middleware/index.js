@@ -25,4 +25,9 @@ export const filterByFields = ({
   const fullUrl = generateFiltersUrl({ fields, url });
 
   console.log('fullUrl  ', fullUrl);
+  fetch(fullUrl)
+    .then(data => data.json())
+    .then((data) => {
+      callback(fullUrl, data);
+    })
 };

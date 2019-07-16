@@ -21,7 +21,7 @@ export const generateFiltersUrl = ({ fields, url }) => {
 
     keys
       .forEach((key, index) => {
-        fullUrl += `${key} eq '${fields[key]}' ${index + 1 < keys.length ? 'and' : ''}`;
+        fullUrl += `${key} eq '${fields[key]}' ${index + 1 < keys.length ? 'and ' : ''}`;
       });
   }
 

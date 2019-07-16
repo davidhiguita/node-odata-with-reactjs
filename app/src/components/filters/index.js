@@ -1,5 +1,5 @@
 // @vendors
-import React, { useState } from 'react';
+import React from 'react';
 
 // @odata helper
 import { filterByFields } from '../../odata-middleware';
@@ -7,18 +7,15 @@ import { filterByFields } from '../../odata-middleware';
 // @styles
 import './style.scss';
 
-const initialFilterState = {
-  title: ''
-};
-
 const URL = 'http://localhost:1945/books';
 
 const Filters = ({
+  booksFields,
+  filters,
+  setFilter,
   setQuery,
   setResults
 }) => {
-  const [filters, setFilter] = useState({ ...initialFilterState });
-
   const setFilters = (filterName) => (event) => {
     const newFilters = { ...filters };
     newFilters[filterName] = event.target.value;
@@ -26,19 +23,36 @@ const Filters = ({
   };
 
   const filterBy = () => {
-    console.log('filterBy  ', filters);
-    filterByFields({ fields: filters, url: URL });
+    const clearFilters = {};
+    Object.entries(filters)
+      .filter(([_, info]) => !!info)
+      .forEach(([filterName, info]) => {
+        clearFilters[filterName] = info;
+      })
+    filterByFields({
+      callback: (query, results) => {
+        setQuery(query);
+        setResults(results);
+      },
+      fields: clearFilters,
+      url: URL
+    });
   };
 
   return (
     <div className="app__filters">
-      <div className="filter-title">
-        <input
-          onChange={setFilters('title')}
-          placeholder="Title"
-          value={filters.title}
-        />
-      </div>
+      {booksFields.map((filterName, index) => (
+        <div
+          className={`filter-${filterName}`}
+          key={`filter-${filterName}`}
+        >
+          <input
+            onChange={setFilters(filterName)}
+            placeholder={filterName}
+            value={filters[filterName]}
+          />
+        </div>
+      ))}
 
       <div className="filter-button">
         <button
