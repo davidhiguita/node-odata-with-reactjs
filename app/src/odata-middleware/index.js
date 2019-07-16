@@ -42,7 +42,17 @@ export const filterByFieldsMANUAL = ({
 const fieldsToSelectString = fields => fields.join(', ');
 
 const filstersToFilterString = (filters) => {
-  return "";
+  let filtersString = '';
+  Object.entries(filters)
+    .forEach(([filterName, filterValue], index) => {
+      if (index + 1 < Object.keys(filters).length) {
+        filtersString += `${filterName} eq '${filterValue}' and `
+      } else {
+        filtersString += `${filterName} eq '${filterValue}'`
+      }
+    });
+  console.log('filtersString  ', filtersString);
+  return filtersString;
 };
 
 export const getInfo = async ({
