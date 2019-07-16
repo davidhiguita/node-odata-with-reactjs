@@ -1,13 +1,8 @@
 // @vendors
 import React from 'react';
 
-// @odata helper
-import { getInfoByFieldsMANUAL as getInfoByFields } from '../../odata-middleware';
-
 // @styles
 import './style.scss';
-
-const URL = 'http://localhost:1945/books';
 
 const Fields = ({
   booksFields,
@@ -22,21 +17,6 @@ const Fields = ({
     const newFields = { ...fields };
     newFields[fieldName] = e.target.checked;
     setFields(newFields)
-  };
-
-  const getByFields = () => {
-    const checkedFields = Object.keys(fields)
-      .filter((filterName) => !!fields[filterName])
-      .map(filterName => filterName);
-
-    getInfoByFields({
-      callback: ({ data }) => {
-        setResults(data);
-      },
-      fields: checkedFields,
-      resource: 'books',
-      url: URL
-    });
   };
 
   return (
@@ -57,15 +37,6 @@ const Fields = ({
           </div>
         ))
       }
-
-      <div className="fields-button">
-        <button
-          disabled
-          onClick={getByFields}
-        >
-          GetByFields
-        </button>
-      </div>
     </div>
   );
 }

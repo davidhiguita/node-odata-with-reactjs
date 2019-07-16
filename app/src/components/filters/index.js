@@ -1,13 +1,8 @@
 // @vendors
 import React from 'react';
 
-// @odata helper
-import { filterByFieldsMANUAL as filterByFields } from '../../odata-middleware';
-
 // @styles
 import './style.scss';
-
-const URL = 'http://localhost:1945/books';
 
 const Filters = ({
   booksFields,
@@ -20,23 +15,6 @@ const Filters = ({
     const newFilters = { ...filters };
     newFilters[filterName] = event.target.value;
     setFilter(newFilters);
-  };
-
-  const filterBy = () => {
-    const clearFilters = {};
-    Object.entries(filters)
-      .filter(([_, info]) => !!info)
-      .forEach(([filterName, info]) => {
-        clearFilters[filterName] = info;
-      })
-    filterByFields({
-      callback: (query, results) => {
-        setQuery(query);
-        setResults(results);
-      },
-      fields: clearFilters,
-      url: URL
-    });
   };
 
   return (
@@ -53,15 +31,6 @@ const Filters = ({
           />
         </div>
       ))}
-
-      <div className="filter-button">
-        <button
-          disabled
-          onClick={filterBy}
-        >
-          Search
-        </button>
-      </div>
     </div>
   );
 }
