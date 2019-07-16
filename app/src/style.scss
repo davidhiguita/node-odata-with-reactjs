@@ -11,9 +11,10 @@ body, html {
   grid-gap: 20px;
   grid-template-areas: "app-query app-query"
   "app-filters app-results"
-  "app-fields app-results";
+  "app-fields app-results"
+  "mixed-buttons app-results";
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 60px 1fr 1fr ;
+  grid-template-rows: 60px 1fr 1fr 80px ;
   height: 100vh;
   padding: 60px 100px;
 
@@ -33,6 +34,11 @@ body, html {
 
   &__fields {
     border: solid 2px red;
+  }
+
+  &__mixed-buttons {
+    border: solid 2px orange;
+    grid-area: mixed-buttons;
   }
 
   .react-json-view {

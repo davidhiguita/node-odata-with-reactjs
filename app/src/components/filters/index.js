@@ -2,7 +2,7 @@
 import React from 'react';
 
 // @odata helper
-import { filterByFields } from '../../odata-middleware';
+import { filterByFieldsMANUAL as filterByFields } from '../../odata-middleware';
 
 // @styles
 import './style.scss';
@@ -56,6 +56,7 @@ const Filters = ({
 
       <div className="filter-button">
         <button
+          disabled
           onClick={filterBy}
         >
           Search

@@ -1,9 +1,14 @@
+// @vendors
+import { o } from 'odata';
+
+// @utils
 import {
   generateFiltersUrl,
   generateSelectedFieldsUrl
 } from './utils';
 
-export const getInfoByFields = ({
+// MANUALLY URLs
+export const getInfoByFieldsMANUAL = ({
   callback,
   fields,
   url
@@ -17,7 +22,7 @@ export const getInfoByFields = ({
     })
 };
 
-export const filterByFields = ({
+export const filterByFieldsMANUAL = ({
   callback,
   fields,
   url
@@ -30,4 +35,30 @@ export const filterByFields = ({
     .then((data) => {
       callback(fullUrl, data);
     })
+};
+
+// WITH ODATA
+
+const fieldsToSelectString = fields => fields.join(', ');
+
+const filstersToFilterString = (filters) => {
+  return "";
+};
+
+export const getInfo = async ({
+  callback,
+  fields,
+  filters,
+  resource,
+  url
+}) => {
+  const fieldsString = fieldsToSelectString(fields);
+  const filterString = filstersToFilterString(filters);
+  const data = await o(url)
+    .get(resource)
+    .query({
+      $filter: filterString,
+      $select: fieldsString
+    });
+  callback({ data });
 };

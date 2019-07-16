@@ -2,7 +2,7 @@
 import React from 'react';
 
 // @odata helper
-import { getInfoByFields } from '../../odata-middleware';
+import { getInfoByFieldsMANUAL as getInfoByFields } from '../../odata-middleware';
 
 // @styles
 import './style.scss';
@@ -30,11 +30,11 @@ const Fields = ({
       .map(filterName => filterName);
 
     getInfoByFields({
-      callback: (query, results) => {
-        setQuery(query);
-        setResults(results);
+      callback: ({ data }) => {
+        setResults(data);
       },
       fields: checkedFields,
+      resource: 'books',
       url: URL
     });
   };
@@ -60,6 +60,7 @@ const Fields = ({
 
       <div className="fields-button">
         <button
+          disabled
           onClick={getByFields}
         >
           GetByFields
